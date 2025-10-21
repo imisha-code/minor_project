@@ -1,0 +1,115 @@
+<DOCTYPE>
+    <html lang = "ru">
+    <meta charset="UTF-8">
+
+<head>
+<title>Решение алгоритмической задачи</title>
+    <style>
+        body {
+        background: radial-gradient(#e2f9ae 20%, #b6c589 100%);
+            }
+        .navbar {
+        background-color: #e14c49;
+        padding: 10px;
+        border-radius: 5px;
+            }
+        .navbar a {
+        color: beige;
+        background-color: #c0d67de7 ;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+        }
+        .container {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+ <nav class="navbar">
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\test.html" class="button">Главная</a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\поиск.html"class="button">Поиск вида</a>
+     <a href=""class="button">Закладки</a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\профиль.html"class="button">Профиль</a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\Решение алг. задачи.html"class="button">Решение алгоритмической задачи</a>
+ </nav>
+
+
+ <div class="container">
+        <h1>Вычисление значения функции</h1>
+        
+        <div class="form-group">
+            <label for="a">Введите вещественное число A:</label>
+            <input id = "a" placeholder="Введите число">
+        </div>
+
+        <div class="buttons">
+            <button class="check-btn" onclick="calculate()">Вычислить</button>
+            <button class="send-btn" onclick="sendToServer()">Отправить</button>
+        </div>
+
+        <div id="result" class="result" style="display: none;">
+        </div>
+    </div>
+
+<script>
+ function calculate() {
+            const a = parseFloat(document.getElementById('a').value);
+            let x;
+            
+            if (isNaN(a)) {
+                alert('Пожалуйста, введите число');
+                return;
+            }
+
+            if (a < 10) {
+                x = Math.pow(a, 4);
+            } else if (a > 61) {
+                x = a;
+            } else {
+                x = a - Math.sin(Math.pow(a, 2));
+             }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <strong>Результат решения задачи:</strong><br>
+                При a = ${a}, x = ${x.toFixed(4)}<br><br>
+                <strong>Вычислено по формуле:</strong><br>
+                ${a < 10 ? `x = a⁴ = ${a}⁴ = ${x.toFixed(4)}` : 
+                  a > 61 ? `x = a = ${x.toFixed(4)}` : 
+                  `x = a - sin(a²) = ${a} - sin(${a}²) = ${x.toFixed(4)}`}
+            `;
+            resultDiv.style.display = 'block';
+        }
+         function sendToServer() {
+            const a = document.getElementById('a').value;
+            if (!a) {
+                alert('Сначала вычислите результат');
+                return;
+            }
+            alert('Данные отправлены на сервер: a = ' + a);
+        }
+
+</script>
+
+</body>
+</html>
