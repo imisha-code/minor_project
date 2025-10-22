@@ -48,9 +48,12 @@
  <nav class="navbar">
      <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\test.html" class="button">Главная</a>
      <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\поиск.html"class="button">Поиск вида</a>
-     <a href=""class="button">Закладки</a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\отзыв.html"class="button">Оставьте свой отзыв</a>
      <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\профиль.html"class="button">Профиль</a>
-     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\Решение алг. задачи.html"class="button">Решение алгоритмической задачи</a>
+     <a href="https://t.me/growbox_market">Маркет садовода</a>
+     <a href="https://t.me/growbox_market"><img src="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\картинки\83248583.webp" width="50" height="50">
+     </a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\Решение алг. задачи.html"class="button"><strong>Решение алгоритмической задачи</strong></a>
  </nav>
 
 
@@ -70,17 +73,12 @@
         <div id="result" class="result" style="display: none;">
         </div>
     </div>
-
+<!-- 1017. Дано вещественное число A. Вычислить x = a**4, -->
+<!-- при a < 10; x = a при a > 61, в противном случае x  = a − sin(a**2)). -->
 <script>
  function calculate() {
             const a = parseFloat(document.getElementById('a').value);
             let x;
-            
-            if (isNaN(a)) {
-                alert('Пожалуйста, введите число');
-                return;
-            }
-
             if (a < 10) {
                 x = Math.pow(a, 4);
             } else if (a > 61) {
@@ -88,25 +86,19 @@
             } else {
                 x = a - Math.sin(Math.pow(a, 2));
              }
-
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = `
-                <strong>Результат решения задачи:</strong><br>
-                При a = ${a}, x = ${x.toFixed(4)}<br><br>
-                <strong>Вычислено по формуле:</strong><br>
-                ${a < 10 ? `x = a⁴ = ${a}⁴ = ${x.toFixed(4)}` : 
-                  a > 61 ? `x = a = ${x.toFixed(4)}` : 
-                  `x = a - sin(a²) = ${a} - sin(${a}²) = ${x.toFixed(4)}`}
-            `;
-            resultDiv.style.display = 'block';
-        }
+                <strong>Результат решения задачи:</strong>
+                <br>
+               x = ${x.toFixed(4)}
+               <br>
+               `;
+            resultDiv.style.display = 'block'
+             }
          function sendToServer() {
             const a = document.getElementById('a').value;
-            if (!a) {
-                alert('Сначала вычислите результат');
-                return;
-            }
-            alert('Данные отправлены на сервер: a = ' + a);
+
+            alert('Данные отправлены на сервер: задача.ру');
         }
 
 </script>

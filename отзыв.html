@@ -1,0 +1,106 @@
+<DOCTYPE>
+    <html lang = "ru">
+    <meta charset="UTF-8">
+    <title>Форма отзыва на товар</title>
+<head>
+   <style>
+        body {
+        background: radial-gradient(#e2f9ae 20%, #b6c589 100%);
+            }
+        h1 {
+        color: #e14c49;
+        text-align: center;
+        margin-bottom: 30px;
+        }
+        .navbar {
+        background-color: #e14c49;
+        padding: 10px;
+        border-radius: 5px;
+            }
+        .navbar a {
+        color: beige;
+        background-color: #c0d67de7 ;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+        }
+        .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: beige;
+        padding: 30px;
+        border-radius: 10px;
+        }
+        .submit-btn {
+        border: #e14c49;
+        background-color: #e14c49;
+        padding: 12px 25px;
+        border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+ <nav class="navbar">
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\test.html" class="button">Главная</a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\поиск.html"class="button">Поиск вида</a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\отзыв.html"class="button"><strong>Оставьте свой отзыв</strong></a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\профиль.html"class="button">Профиль</a>
+     <a href="https://t.me/growbox_market">Маркет садовода</a>
+     <a href="https://t.me/growbox_market"><img src="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\картинки\83248583.webp" width="50" height="50">
+     </a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\Решение алг. задачи.html"class="button">Решение алгоритмической задачи</a>
+ </nav>
+<br>
+    <h1>Форма отзыва на товар</h1>
+    
+    <form action="https://httpbin.org/post" method="POST" class="container">
+        <div>
+            <label for="product_name">Название товара:</label>
+            <input type="text" id="product_name" name="product_name" value="" required>
+        </div>
+
+        <div>
+            <label for="rating">Оценка (1-5):</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" value="" required>
+        </div>
+        
+        <div>
+            <p>Рекомендуете товар?</p>
+            <input type="radio" id="recommend_yes" name="recommend" value="" checked>
+            <label for="recommend_yes">Да</label>
+            
+            <input type="radio" id="recommend_no" name="recommend" value="no">
+            <label for="recommend_no">Нет</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="verified_purchase" name="verified_purchase" value="" checked>
+            <label for="verified_purchase">Я подтверждаю покупку</label>
+        </div>
+        
+        <div>
+            <label for="purchase_date">Дата покупки:</label>
+            <input type="date" id="purchase_date" name="purchase_date" value="" required>
+        </div>
+        
+        <div>
+            <label for="user_password">Пароль для подтверждения:</label>
+            <input type="password" id="user_password" name="user_password" value="" required>
+                    <input type="hidden" id="form_type" name="form_type" value="product_review">
+        </div>
+        
+
+        
+        <div>
+            <label for="review_text">Текст отзыва:</label>
+            <textarea id="review_text" name="review_text" rows="4" required></textarea>
+        </div>
+        
+        <div>
+            <button type="submit" class = "submit-btn">Отправить отзыв</button>
+        </div>
+    </form>
+</body>
+</html>
