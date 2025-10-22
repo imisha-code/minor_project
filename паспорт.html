@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Паспорт РФ</title>
+        <style>
+            body {
+        background: radial-gradient(#e2f9ae 20%, #b6c589 100%);
+            }
+        .navbar {
+        background-color: #e14c49;
+        padding: 10px;
+        border-radius: 5px;
+            }
+        .navbar a {
+        color: beige;
+        background-color: #c0d67de7 ;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+        }
+        </style>
+</head>
+<body>
+ <nav class="navbar">
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\test.html" class="button"><strong>Главная</strong></a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\поиск.html"class="button">Поиск вида</a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\отзыв.html"class="button">Оставьте свой отзыв</a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\профиль.html"class="button">Профиль</a>
+     <a href="https://t.me/growbox_market">Маркет садовода</a>
+     <a href="https://t.me/growbox_market"><img src="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\картинки\83248583.webp" width="50" height="50">
+     </a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\Решение алг. задачи.html"class="button">Решение алгоритмической задачи</a>
+     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\паспорт.html">Паспорт</a>
+ </nav>
+<br>
+    <div align="right">
+        <button onclick="switchLanguage()">EN/RU</button>
+    </div>
+
+    <div align="center">
+        <h1 id="title">ПАСПОРТ ГРАЖДАНИНА РОССИЙСКОЙ ФЕДЕРАЦИИ</h1>
+    </div>
+
+    <table border="1" width="100%">
+        <tr>
+            <td width="30%"><strong id="surname">Фамилия</strong></td>
+            <td id="surnameValue">ИВАНОВ</td>
+        </tr>
+        <tr>
+            <td><strong id="name">Имя</strong></td>
+            <td id="nameValue">ИВАН</td>
+        </tr>
+        <tr>
+            <td><strong id="patronymic">Отчество</strong></td>
+            <td id="patronymicValue">ИВАНОВИЧ</td>
+        </tr>
+        <tr>
+            <td><strong id="birthDate">Дата рождения</strong></td>
+            <td id="birthDateValue">15.03.1985</td>
+        </tr>
+        <tr>
+            <td><strong id="birthPlace">Место рождения</strong></td>
+            <td id="birthPlaceValue">ГОРОД МОСКВА</td>
+        </tr>
+        <tr>
+            <td><strong id="issueDate">Дата выдачи</strong></td>
+            <td id="issueDateValue">20.01.2010</td>
+        </tr>
+    </table>
+
+    <script>
+        let isCyrillic = true;
+
+        const translations = {
+            cyrillic: {
+                title: "ПАСПОРТ ГРАЖДАНИНА РОССИЙСКОЙ ФЕДЕРАЦИИ",
+                surname: "Фамилия",
+                name: "Имя", 
+                patronymic: "Отчество",
+                birthDate: "Дата рождения",
+                birthPlace: "Место рождения",
+                issueDate: "Дата выдачи",
+                surnameValue: "ИВАНОВ",
+                nameValue: "ИВАН",
+                patronymicValue: "ИВАНОВИЧ",
+                birthPlaceValue: "ГОРОД МОСКВА"
+            },
+            latin: {
+                title: "PASSPORT OF THE RUSSIAN FEDERATION",
+                surname: "Surname",
+                name: "Name",
+                patronymic: "Patronymic", 
+                birthDate: "Date of Birth",
+                birthPlace: "Place of Birth",
+                issueDate: "Date of Issue",
+                surnameValue: "IVANOV",
+                nameValue: "IVAN",
+                patronymicValue: "IVANOVICH",
+                birthPlaceValue: "MOSCOW"
+            }
+        };
+
+        function switchLanguage() {
+            isCyrillic = !isCyrillic;
+            const lang = isCyrillic ? translations.cyrillic : translations.latin;
+            
+            document.getElementById('title').textContent = lang.title;
+            document.getElementById('surname').textContent = lang.surname;
+            document.getElementById('name').textContent = lang.name;
+            document.getElementById('patronymic').textContent = lang.patronymic;
+            document.getElementById('birthDate').textContent = lang.birthDate;
+            document.getElementById('birthPlace').textContent = lang.birthPlace;
+            document.getElementById('issueDate').textContent = lang.issueDate;
+            document.getElementById('surnameValue').textContent = lang.surnameValue;
+            document.getElementById('nameValue').textContent = lang.nameValue;
+            document.getElementById('patronymicValue').textContent = lang.patronymicValue;
+            document.getElementById('birthPlaceValue').textContent = lang.birthPlaceValue;
+        }
+    </script>
+</body>
+</html>
