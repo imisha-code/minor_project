@@ -1,210 +1,294 @@
-<DOCTYPE>
-    <html lang = "ru">
-    <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
+    <meta charset="UTF-8">
     <title>Plenty</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-        background: radial-gradient(#e2f9ae 20%, #b6c589 100%);
-            }
-        .navbar {
-        background-color: #e14c49;
-        padding: 10px;
-        border-radius: 5px;
-            }
-        .navbar a {
-        color: beige;
-        background-color: #c0d67de7 ;
-        border-radius: 5px;
-        padding: 10px;
-        margin: 10px;
-        display: inline-block;
+            background: radial-gradient(#e2f9ae 20%, #b6c589 100%);
+            font-family: Arial, sans-serif;
         }
-       .solid-border { border: 10px solid #e14c49; 
+        
+       
+        .navbar-custom {
+            background-color: #e14c49;
+            border-radius: 5px;
         }
-       .item {
-        text-align: center;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
+        
+        .nav-link-custom {
+            color: beige !important;
+            background-color: #c0d67de7;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 10px 15px !important;
+            text-align: center;
+            transition: all 0.3s;
         }
+        
+        .nav-link-custom:hover {
+            background-color: #a9c26a;
+        }
+        
+        
+        .item {
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            height: 100%;
+        }
+        
+        .solid-border {
+            border: 10px solid #e14c49;
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            max-width: 250px;
+        }
+        
         button {
-        padding: 8px 15px;
-        margin: 5px;
-        border: none;
-        cursor: pointer;
+            padding: 8px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
         }
-      .horizontal-row {
-        display: flex;         
-        flex-direction: row;    
-        gap: 10px;             
+    
+        @media (max-width: 768px) {
+            .nav-link-custom {
+                margin: 3px;
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+            
+            .solid-border {
+                border-width: 5px;
+                max-width: 200px;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+                margin: 10px 0;
+            }
         }
-      .item {
-        display: inline-block; 
-        width: 30%;
-        margin-right: 2%;
-        vertical-align: top;
+        
+        @media (max-width: 576px) {
+            .nav-link-custom {
+                display: block;
+                width: 100%;
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
     
 <body>
- <nav class="navbar">
-     <a href="C:\Users\jpgpn\OneDrive\Рабочий стол\майнор\кр\test.html" class="button"><strong>Главная</strong></a>
-     <a href="поиск.html"class="button">Поиск вида</a>
-     <a href="отзыв.html"class="button">Оставьте свой отзыв</a>
-     <a href="профиль.html"class="button">Профиль</a>
-     <a href="https://t.me/growbox_market">Маркет садовода</a>
-     <a href="https://t.me/growbox_market"><img src="картинки/83248583.webp" width="50" height="50">
-     </a>
-     <a href="Решение алг. задачи.html"class="button">Решение алгоритмической задачи</a>
-     <a href="паспорт.html">Паспорт</a>
- </nav>
-<br>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <div class="navbar-nav w-100 justify-content-between flex-wrap">
+                    <a class="nav-link nav-link-custom" href="test.html"><strong>Главная</strong></a>
+                    <a class="nav-link nav-link-custom" href="поиск.html">Поиск вида</a>
+                    <a class="nav-link nav-link-custom" href="отзыв.html">Оставьте отзыв</a>
+                    <a class="nav-link nav-link-custom" href="профиль.html">Профиль</a>
+                    <a class="nav-link nav-link-custom" href="https://t.me/growbox_market">
+                        Маркет садовода
+                    </a>
+                    <a class="nav-link nav-link-custom" href="Решение алг. задачи.html">
+                        Решение задачи
+                    </a>
+                    <a class="nav-link nav-link-custom" href="паспорт.html">Паспорт</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<a id = "up"></a> <a href = "#down"> Вниз </a>
-<br> 
-<a href = "#r1"> К растениям </a> 
-<br>
-<a href = "#r2"> К горшкам </a>
+  
+    <div class="container mt-3">
+        <div class="page-links">
+            <a href="#down">Вниз</a> | 
+            <a href="#r1">К растениям</a> | 
+            <a href="#r2">К горшкам</a>
+        </div>
+    </div>
 
-<br>
-<a id = "r1"></a>
+    <div class="container mt-4">
+        <a id="r1"></a>
+        <h2 class="text-center mb-4" style="color: #e14c49;">Растения</h2>
+        
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="item">
+                    <img src="картинки/1pgo79b3aiu9iwjl0tk359r2nohkmel4.webp"
+                         class="solid-border img-fluid mb-3" 
+                         alt="Венерина мухоловка">
+                    <h3 style="color:#e14c49;">Венерина мухоловка</h3>
+                    <button style="background-color: #e14c49; color: white;">Купить</button>
+                    <button style="background-color: beige; color: #333;">Подробнее</button>
+                </div>
+            </div>
+          
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="item">
+                    <img src="картинки/shutterstock_2307089829_1738571840-e1738571972950.jpg"
+                         class="solid-border img-fluid mb-3" 
+                         alt="Хамедорея">
+                    <h3 style="color:#e14c49;">Хамедорея</h3>
+                    <button style="background-color: #e14c49; color: white;">Купить</button>
+                    <button style="background-color: beige; color: #333;">Подробнее</button>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="item">
+                    <img src="картинки/vbyw56wt5w3p6232xifkrcfpkdl8ubol.jpg"
+                         class="solid-border img-fluid mb-3" 
+                         alt="Гузмания">
+                    <h3 style="color:#e14c49;">Гузмания</h3>
+                    <button style="background-color: #e14c49; color: white;">Купить</button>
+                    <button style="background-color: beige; color: #333;">Подробнее</button>
+                </div>
+            </div>
+          
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="item">
+                    <img src="картинки/6057-700x840.jpg"
+                         class="solid-border img-fluid mb-3" 
+                         alt="Традесканция">
+                    <h3 style="color:#e14c49;">Традесканция</h3>
+                    <button style="background-color: #e14c49; color: white;">Купить</button>
+                    <button style="background-color: beige; color: #333;">Подробнее</button>
+                </div>
+            </div>
+        </div>
+        
+       
+        <div class="row">
+       
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="item">
+                    <img src="картинки/28927.750.jpg"
+                         class="solid-border img-fluid mb-3" 
+                         alt="Замиокулькас">
+                    <h3 style="color:#e14c49;">Замиокулькас</h3>
+                    <button style="background-color: #e14c49; color: white;">Купить</button>
+                    <button style="background-color: beige; color: #333;">Подробнее</button>
+                </div>
+            </div>
+            
+            
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="item">
+                    <img src="картинки/9040838_s2.jpg"
+                         class="solid-border img-fluid mb-3" 
+                         alt="Эхеверия">
+                    <h3 style="color:#e14c49;">Эхеверия</h3>
+                    <button style="background-color: #e14c49; color: white;">Купить</button>
+                    <button style="background-color: beige; color: #333;">Подробнее</button>
+                </div>
+            </div>
+            
+           
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="item">
+                    <img src="картинки/vidy-i-sorta.jpg"
+                         class="solid-border img-fluid mb-3" 
+                         alt="Базилик">
+                    <h3 style="color:#e14c49;">Базилик</h3>
+                    <button style="background-color: #e14c49; color: white;">Купить</button>
+                    <button style="background-color: beige; color: #333;">Подробнее</button>
+                </div>
+            </div>
+            
+           
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="item">
+                    <img src="картинки/роза.webp"
+                         class="solid-border img-fluid mb-3" 
+                         alt="Роза кордана">
+                    <h3 style="color:#e14c49;">Роза кордана</h3>
+                    <button style="background-color: #e14c49; color: white;">Купить</button>
+                    <button style="background-color: beige; color: #333;">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="container">
-<div class="row">
-    <div class="col-12 col-md-6 col-lg-3 mb-4">
- <div class="item">
- <img src= "картинки/1pgo79b3aiu9iwjl0tk359r2nohkmel4.webp"
- class = "solid-border"  alt = "venus flytrap" width="200" height="175">
- <figcaption style = "color:#e14c49;">
-   <h3>Венерина мухоловка</h3> 
-    <button style="background-color: #e14c49;"> Купить </button>
-    <button style="background-color: beige;"> Подробнее </button></figcaption>
- </div>
-<br>
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
- <div class="item">
- <img src="картинки/shutterstock_2307089829_1738571840-e1738571972950.jpg"
- class = "solid-border" alt = "хамедорея" width="200" height="175">
- <figcaption style = "color:#e14c49; ">
-   <h3>Хамедорея</h3> 
-    <button style="background-color: #e14c49;"> Купить </button>
-    <button style="background-color: beige;"> Подробнее</button></figcaption>    
- </div>
-<br>
-            <div class="col-12 col-md-6 col-lg-3 mb-4">
- <div class = "item">
- <img src="картинки/vbyw56wt5w3p6232xifkrcfpkdl8ubol.jpg"
- class = "solid-border" alt = "Гузмания" width="200" height="175">
- <figcaption style = "color:#e14c49; ">
-   <h3>Гузмания</h3> 
-    <button style="background-color: #e14c49;"> Купить </button>
-    <button style="background-color: beige;"> Подробнее </button></figcaption>  
- </div>
-<div class="col-12 col-md-6 col-lg-3 mb-4">
- <div class="item">
- <img src="картинки/6057-700x840.jpg"
- class = "solid-border" alt = "Традесканция" width="200" height="175">
- <figcaption style = "color:#e14c49; ">
-   <h3>Традесканция</h3> 
-    <button style="background-color: #e14c49;"> Купить </button>
-    <button style="background-color: beige;"> Подробнее </button></figcaption> 
-</div>
+    
+    <div class="container mt-5">
+        <a id="r2"></a>
+        <h2 class="text-center mb-4" style="color: #e14c49;">Горшки</h2>
+        
+        <div class="row">
+          
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="item">
+                    <img src="картинки/3pz8xdu6zlh0lwas2go4u0kuh47nfmuj.jpg"
+                         class="solid-border img-fluid mb-3" 
+                         alt="Плетенный горшок">
+                    <h3 style="color:#e14c49;">Плетенный горшок</h3>
+                    <button style="background-color: #e14c49; color: white;">Купить</button>
+                    <button style="background-color: beige; color: #333;">Подробнее</button>
+                </div>
+            </div>
+            
+            <!-- Товар 10 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="item">
+                    <img src="картинки/flower-pots.jpg"
+                         class="solid-border img-fluid mb-3" 
+                         alt="Горшок на ножках">
+                    <h3 style="color:#e14c49;">Горшок на ножках</h3>
+                    <button style="background-color: #e14c49; color: white;">Купить</button>
+                    <button style="background-color: beige; color: #333;">Подробнее</button>
+                </div>
+            </div>
+            
+            <!-- Товар 11 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="item">
+                    <img src="картинки/700-nw.jpg"
+                         class="solid-border img-fluid mb-3" 
+                         alt="Керамический горшок">
+                    <h3 style="color:#e14c49;">Керамический горшок</h3>
+                    <button style="background-color: #e14c49; color: white;">Купить</button>
+                    <button style="background-color: beige; color: #333;">Подробнее</button>
+                </div>
+            </div>
+            
+            <!-- Товар 12 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="item">
+                    <img src="картинки/H99fa5b656aa047e09e86b214bfe07705A.webp"
+                         class="solid-border img-fluid mb-3" 
+                         alt="Горшок-домик">
+                    <h3 style="color:#e14c49;">Горшок-домик</h3>
+                    <button style="background-color: #e14c49; color: white;">Купить</button>
+                    <button style="background-color: beige; color: #333;">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<br>
-<div class = "row"> 
-    <div class="col-12 col-md-6 col-lg-3 mb-4">
- <div class="item">
- <img src= "картинки/28927.750.jpg"
- class = "solid-border"  alt = "jjj" width="200" height="175">
- <figcaption style = "color:#e14c49;">
-   <h3>Замиокулькас</h3> 
-    <button style="background-color: #e14c49;"> Купить </button>
-    <button style="background-color: beige;"> Подробнее </button></figcaption>
- </div>
-<br>
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
- <div class="item">
- <img src="картинки/9040838_s2.jpg"
- class = "solid-border" alt = "ppp" width="200" height="175">
- <figcaption style = "color:#e14c49; ">
-   <h3>Эхеверия</h3> 
-    <button style="background-color: #e14c49;">Купить </button>
-    <button style="background-color: beige;"> Подробнее</button></figcaption>    
- </div>
-<br>
-            <div class="col-12 col-md-6 col-lg-3 mb-4">
- <div class = "item">
- <img src="картинки/vidy-i-sorta.jpg"
- class = "solid-border" alt = "Гузмания" width="200" height="175">
- <figcaption style = "color:#e14c49; ">
-   <h3>Базилик</h3> 
-    <button style="background-color: #e14c49;"> Купить </button>
-    <button style="background-color: beige;"> Подробнее </button></figcaption>  
- </div>
-<br>
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
- <div class="item">
- <img src="картинки/роза.webp"
- class = "solid-border" alt = "Традесканция" width="200" height="175">
- <figcaption style = "color:#e14c49; ">
-   <h3>Роза кордана</h3> 
-    <button style="background-color: #e14c49;"> Купить </button>
-    <button style="background-color: beige;"> Подробнее </button></figcaption> 
-</div>
-</div>
-</p>
-<a id = "r2"></a>
-<p>
-    <div class="col-12 col-md-6 col-lg-3 mb-4">
- <div class="item">
- <img src="картинки/3pz8xdu6zlh0lwas2go4u0kuh47nfmuj.jpg"
- class = "solid-border" alt = "горшок" width="200" height="175">
- <figcaption style = "color:#e14c49; ">
-   <h3>Плетенный горшок</h3> 
-    <button style="background-color: #e14c49;"> Купить </button>
-    <button style="background-color: beige;"> Подробнее </button></figcaption> 
-</div>
-<br>
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
- <div class="item">
- <img src="картинки/flower-pots.jpg"
- class = "solid-border" alt = "горшок" width="200" height="175">
- <figcaption style = "color:#e14c49; ">
-   <h3>Горшок на ножках</h3> 
-    <button style="background-color: #e14c49;"> Купить </button>
-    <button style="background-color: beige;"> Подробнее </button></figcaption> 
-</div>
-<br>
-            <div class="col-12 col-md-6 col-lg-3 mb-4">
- <div class="item">
- <img src="картинки/700-nw.jpg"
- class = "solid-border" alt = "горшок" width="200" height="175">
- <figcaption style = "color:#e14c49; ">
-   <h3>Керамический горшок</h3> 
-    <button style="background-color: #e14c49;"> Купить </button>
-    <button style="background-color: beige;"> Подробнее </button></figcaption> 
-</div>
-<br>
-                <div class="col-12 col-md-6 col-lg-3 mb-4">
- <div class="item">
- <img src="картинки/H99fa5b656aa047e09e86b214bfe07705A.webp"
- class = "solid-border" alt = "горшок" width="200" height="175">
- <figcaption style = "color:#e14c49; ">
-   <h3>Горшок-домик</h3> 
-    <button style="background-color: #e14c49;"> Купить </button>
-    <button style="background-color: beige;"> Подробнее </button></figcaption> 
-</div>
-<br>
-<a id = "down"></a>
-<a href = "#up"> К началу </a>
-<br>
-<a href = "#r1"> К растениям </a>
-<br>
-<a href = "#r2"> К горшкам </a>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ССЫЛКИ В КОНЦЕ -->
+    <div class="container mt-4 mb-4">
+        <div class="page-links text-center">
+            <a id="down"></a>
+            <a href="#up">К началу</a> | 
+            <a href="#r1">К растениям</a> | 
+            <a href="#r2">К горшкам</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
