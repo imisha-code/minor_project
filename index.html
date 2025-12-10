@@ -22,21 +22,13 @@
         margin: 10px;
         display: inline-block;
         }
-        .item {
+       .solid-border { border: 10px solid #e14c49; 
+        }
+       .item {
         text-align: center;
         padding: 15px;
         border: 1px solid #ddd;
         border-radius: 8px;
-        background: white;
-        height: 100%;
-        margin-bottom: 20px;
-        }
-        .solid-border {
-        border: 10px solid #e14c49;
-        border-radius: 8px;
-        width: 100%; 
-        height: auto;
-        max-width: 250px; 
         }
         button {
         padding: 8px 15px;
@@ -44,9 +36,10 @@
         border: none;
         cursor: pointer;
         }
-        .horizontal-row {
-        flex-direction: column; 
-        gap: 15px;
+      .horizontal-row {
+        display: flex;         
+        flex-direction: row;    
+        gap: 10px;             
         }
       .item {
         display: inline-block; 
@@ -54,11 +47,6 @@
         margin-right: 2%;
         vertical-align: top;
         }
-       .container {
-         width: 100%; 
-         max-width: 1200px; 
-         margin: 0 auto; 
-         }
     </style>
 </head>
     
